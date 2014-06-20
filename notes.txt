@@ -1,0 +1,40 @@
+--- 2014.06.20 ---
+
+reserved variables in Bash: $PATH and $HOME
+
+$() generates a bash variables, can be a command that bash understands
+
+>> echo $(which mv) // takes output of 'which mv', and makes a variable
+
+2 parentheses is arithmetic environment:
+
+>> echo $((1+1))
+2
+
+Wildcards in BASH: * () [] ?
+
+[]: specify what characters we want to match
+matches to s1.txt or s2.txt 
+>> ls s[12].txt
+it also takes natural sequences
+>> ls s[1-3].txt
+>> ls s[a-g].txt
+
+{}: put in characters that are delimited with the ',':
+>> touch file{A,C,D}.txt
+>> ls
+fileA.txt fileC.txt fileD.txt
+
+OR:
+>> ls file{A,D}.txt
+
+You can also expand a natural sequence with the {}, but with ..
+>> touch file{1..5}.txt
+>> ls
+file1.txt file2.txt file3.txt file4.txt file5.txt
+
+The ? are is place holder for a specific character - when you do ls for example
+
+
+We can also generate for, while loops 
+
